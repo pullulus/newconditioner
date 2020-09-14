@@ -19,18 +19,18 @@ class ConditionerTest {
         assertEquals(expected,actual);
     }
 
-@Test
-public void getAndSetCurrentTemperatureEqualMaximum() {
-    Conditioner conditioner = new Conditioner();
+    @Test
+    public void getAndSetCurrentTemperatureEqualMaximum() {
+        Conditioner conditioner = new Conditioner();
 
-    conditioner.setMaxTemperature(30);
-    conditioner.setCurrentTemperature(30);
+        conditioner.setMaxTemperature(30);
+        conditioner.setCurrentTemperature(30);
 
-    int actual = conditioner.getCurrentTemperature();
-    int expected = 0;
+        int actual = conditioner.getCurrentTemperature();
+        int expected = 30;
 
-    assertEquals(expected, actual);
-}
+        assertEquals(expected, actual);
+    }
 
     @Test
     public void increaseCurrentTemperature() {
