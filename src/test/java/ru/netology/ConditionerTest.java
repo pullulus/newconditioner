@@ -68,6 +68,19 @@ class ConditionerTest {
         assertEquals(30, conditioner.getCurrentTemperature());
     }
 
+    @Test
+    public void increaseCurrentTemperatureOverMaximum() {
+
+        conditioner.setMaxTemperature(100);
+        conditioner.setCurrentTemperature(50);
+
+
+         conditioner.setMaxTemperature(30);
+
+         conditioner.increaseCurrentTemperature();
+
+        assertEquals(50, conditioner.getCurrentTemperature());
+    }
 
 
     @Test
